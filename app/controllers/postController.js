@@ -1,24 +1,31 @@
 (function() {
 
-    var PostController = function($scope, $log, postFactory) {
-        $scope.posts = [];
-        $scope.filteredPosts = [];
-        $scope.postsPerPage = 9;
-        $scope.curPage = 1;
-        $scope.maxPages = 13;
-        $scope.numberOfPages = function() {
-            return Math.ceil($scope.posts.length / $scope.postsPerPage)
-        }
+    var PostController = function($scope, $log, $routeParams, postFactory) {
+        var postId = $routeParams.postId;
+        $scope.post = null;
+        $scope.author = null;
+        $scope.comments = null;
 
         function init() {
-            postFactory.getPosts()
+            postFactory.getPost(postId)
                 .then(function(response) {
-                    $scope.posts = response.data;
-                    $scope.$watch('curPage + maxPages', function() {
-                        var begin = (($scope.curPage - 1) * $scope.postsPerPage),
-                            end = begin + $scope.postsPerPage;
-                        $scope.filteredPosts = $scope.posts.slice(begin, end);
-                    })
+                    $scope.post = response.data;
+                    console.log($scope.post)
+                    postFactory.getAuthor($scope.post.userId)
+                        .then(function(response) {
+                            $scope.author = response.data;
+                            console.log($scope.author)
+                        }, function(data, status, headers, config) {
+                            $log.log(data.error + ' ' + status);
+                        });
+                }, function(data, status, headers, config) {
+                    $log.log(data.error + ' ' + status);
+                });
+
+            postFactory.getComments(postId)
+                .then(function(response) {
+                    $scope.comments = response.data;
+                    console.log($scope.comments)
                 }, function(data, status, headers, config) {
                     $log.log(data.error + ' ' + status);
                 });
@@ -27,7 +34,7 @@
         init();
     };
 
-    PostController.$inject = ['$scope', '$log', 'postFactory'];
+    PostController.$inject = ['$scope', '$log', '$routeParams', 'postFactory'];
 
     angular.module('postApp')
         .controller('PostController', PostController);

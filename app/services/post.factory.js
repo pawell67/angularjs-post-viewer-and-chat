@@ -8,6 +8,18 @@
             return $http.get(apiUrl + 'posts');
         };
 
+        factory.getPost = function(postId) {
+            return $http.get(apiUrl + 'posts/' + postId);
+        }
+
+        factory.getAuthor = function(authorId) {
+            return $http.get(apiUrl + 'users/' + authorId);
+        }
+
+        factory.getComments = function(postId) {
+            return $http.get(apiUrl + 'comments?postId=' + postId);
+        }
+
         return factory;
     };
 

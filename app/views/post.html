@@ -1,1 +1,28 @@
-<h1>post</h1>
+<div class="post-header">
+    <h2>{{post.title}}</h2>
+    <div class="author">
+        <span class="author-name">{{author.name}}</span>
+        <a href="mailto:{{author.email}}"><span class="author-email">{{author.email}}</span></a>
+        <a href="{{author.website}}" class="author-website">{{author.website}}</a>
+    </div>
+</div>
+
+<div class="post-container">
+
+    <div class="post-body">
+        <p>{{post.body}}</p>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="comments-container">
+        <div class="comment card" ng-repeat="comment in comments">
+            <div class="card-block">
+                <p class="card-text">{{comment.body}}</p>
+            </div>
+            <div class="card-footer">
+                {{comment.email}}
+            </div>
+        </div>
+    </div>
+</div>
