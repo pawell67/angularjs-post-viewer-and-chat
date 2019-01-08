@@ -1,0 +1,22 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #f8f8f8;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.card {
+    display: inline-block;
+    height: 230px;
+}
+
+.card h5 {
+    height: 120px;
+}
+
+.card-body {
+    height: 100%;
+}

@@ -1,4 +1,5 @@
 {
+    "name": "fancyfon",
     "version": "0.0.1",
     "description": "FancyFon recruitment task",
     "license": "MIT",
@@ -7,6 +8,6 @@
         "http-server": "^0.11.1"
     },
     "scripts": {
-        "start": "http-server -a localhost -p 8000 -c-1 ./app"
+        "start": "http-server -a localhost -p 8000 -c-1 ./"
     }
 }
