@@ -10,9 +10,12 @@
     border: 0;
 }
 
-.card h5 {
+.card-title {
     height: 120px;
     margin: 0;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 1.25em;
 }
 
 .card-body {
@@ -20,6 +23,7 @@
     width: 100%;
     border: 1px solid #a59090;
     border-radius: 5px;
+    padding: 0;
 }
 
 a {
@@ -72,15 +76,20 @@ a:hover {
     color: #00A2FF;
 }
 
+.post-container,
+.posts-container {
+    margin: 0 10%;
+}
+
+.posts-container .card-text {
+    padding: 1.25em;
+}
+
 
 /* bootstrap */
 
 .pagination {
     margin: 20px 0;
-}
-
-.post-container {
-    margin: 0 10%;
 }
 
 .pagination ul {
