@@ -1,12 +1,12 @@
 <h1>posts</h1>
-<div class="container">
-
-    <div ng-repeat="post in posts" class="card col-sm-12 col-md-6 col-lg-4">
+<div class="post-container">
+    <div ng-repeat="post in filteredPosts" class="card col-sm-12 col-md-6 col-lg-4">
         <div class="card-body">
-            <h5 class="card-title">{{post.title}}</h5>
+            <a href="#/{{post.id}}">
+                <h5 class="card-title">{{post.title}}</h5>
+            </a>
             <p class="card-text">{{post.body.length>45?(post.body).substring(0,45):post.body}}...</p>
         </div>
-
     </div>
-
+    <div data-pagination="" data-num-pages="numberOfPages()" data-current-page="curPage" data-max-size="maxPages" data-boundary-links="true"></div>
 </div>

@@ -1,6 +1,6 @@
 (function() {
 
-    var app = angular.module('postApp', ['ngRoute']);
+    var app = angular.module('postApp', ['ngRoute', 'ui.bootstrap']);
 
     app.config(function($routeProvider) {
         $routeProvider
