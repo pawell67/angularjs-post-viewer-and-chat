@@ -10,13 +10,13 @@
             $scope.messages = [{
                 from: 'Janusz',
                 type: 'received',
-                timestamp: '2019-01-09 16:41',
-                content: 'Hello Paweł!'
+                timestamp: '2019-01-09 08:41',
+                content: 'Good morning everyone!'
             }, {
-                from: 'Janusz',
+                from: 'Andrzej',
                 type: 'received',
-                timestamp: '2019-01-09 16:42',
-                content: 'How are you? When can we met?'
+                timestamp: '2019-01-09 08:42',
+                content: 'Hello, how are you guys?'
             }];
             setTimeout(function() {
                 displayCurrentMessages()
@@ -104,8 +104,7 @@
                     times[i] = '0' + times[i];
                 }
             }
-            var date = `${times[0]} - ${times[1]} - ${times[2]}
-                            ${times[3]}:${times[4]}`
+            var date = `${times[0]}-${times[1]}-${times[2]}  ${times[3]}:${times[4]}`
             return date;
         };
 
