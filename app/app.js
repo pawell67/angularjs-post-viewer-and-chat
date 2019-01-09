@@ -4,15 +4,15 @@
 
     app.config(function($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/posts', {
                 controller: 'PostsController',
                 templateUrl: 'app/views/posts.html'
             })
-            .when('/:postId', {
+            .when('/posts/:postId', {
                 controller: 'PostController',
                 templateUrl: 'app/views/post.html'
             })
-            .otherwise({ redirectTo: '/' });
+            .otherwise({ redirectTo: '/posts' });
     })
 
 }());

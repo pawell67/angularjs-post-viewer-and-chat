@@ -1,6 +1,28 @@
-.app-title {
-    color: #00A2FF;
-    padding-left: 10%;
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/Lato-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    font-family: 'Lato-Regular', sans-serif;
+}
+
+.nav {
+    background-color: #009FDF;
+    padding-left: 10.5%;
+    height: 40px;
+}
+
+.nav a,
+.nav a:hover {
+    position: relative;
+    top: 7px;
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 20px;
 }
 
 .post {
@@ -11,9 +33,9 @@
 }
 
 .card-title {
-    height: 120px;
+    height: 125px;
     margin: 0;
-    background-color: #00A2FF;
+    background-color: #009FDF;
     color: #ffffff;
     padding: 1.25em;
 }
@@ -21,8 +43,7 @@
 .card-body {
     height: 100%;
     width: 100%;
-    border: 1px solid #a59090;
-    border-radius: 5px;
+    border: 1px solid #009FDF;
     padding: 0;
 }
 
@@ -35,11 +56,9 @@ a:hover {
 .card-block {
     padding: 1.25rem;
     border: 1px solid #e5e5e5;
-    border-radius: .25rem .25rem 0 0;
 }
 
 .card-footer {
-    border-radius: 0 0 .25rem .25rem;
     border: 1px solid #e5e5e5;
     border-top: 0;
 }
@@ -49,15 +68,17 @@ a:hover {
 }
 
 .post-header {
-    background-color: #00A2FF;
+    background-color: #009FDF;
     height: 200px;
     position: relative;
     margin-bottom: 20px;
+    margin-top: 21px;
 }
 
 .post-header h2 {
     color: #ffffff;
     padding-left: 10%;
+    padding-right: 10%;
     font-size: 2.5em;
 }
 
@@ -78,9 +99,12 @@ a:hover {
     transition: 0.3s ease-in-out;
 }
 
-.post-container,
-.posts-container {
+.post-container {
     margin: 0 10%;
+}
+
+.posts-container {
+    margin: 16px 10% 0 10%;
 }
 
 .posts-container .card-text {

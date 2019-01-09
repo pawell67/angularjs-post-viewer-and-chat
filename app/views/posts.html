@@ -1,7 +1,7 @@
 <div class="posts-container">
     <div ng-repeat="post in filteredPosts" class="card post col-sm-12 col-md-6 col-lg-4">
         <div class="card-body">
-            <a href="#/{{post.id}}">
+            <a href="#/posts/{{post.id}}">
                 <h5 class="card-title">{{post.title}}</h5>
             </a>
             <p class="card-text">{{post.body.length>45?(post.body).substring(0,45):post.body}}...</p>

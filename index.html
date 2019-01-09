@@ -3,24 +3,21 @@
 
 <head>
     <title>Post App - FancyFon Recruitment task</title>
-    <link href="styles/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
-    <a href="#/">
-        <h2 class="app-title">Post App</h2>
-    </a>
+    <div ng-include="'app/components/header.html'"></div>
 
     <div ng-view></div>
-    <script src="scripts/jquery-3.3.1.slim.min.js"></script>
-    <script src="scripts/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/angular.js"></script>
+    <script src="assets/scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/scripts/popper.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+    <script src="assets/scripts/angular.js"></script>
     <script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
-    <script src="scripts/angular-route.min.js"></script>
+    <script src="assets/scripts/angular-route.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/postsController.js"></script>
     <script src="app/controllers/postController.js"></script>
