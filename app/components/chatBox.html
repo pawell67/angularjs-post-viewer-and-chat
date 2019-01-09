@@ -1,0 +1,23 @@
+<div class="row chat-box" ng-controller="ChatController">
+    <div class="panel panel-default">
+        <div class="panel-heading chat-header row" id="chat-header">
+            <div class="col-md-8 col-xs-8">
+                <h5 class="panel-title"><i class="fas fa-xs fa-comment-alt"></i>Janusz</h5>
+            </div>
+            <div class="col-md-4 col-xs-4 chat-controlls">
+                <i class="fas far fa-window-minimize" ng-click="toggleChat()" id="chat-toggler"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="panel-body chat-body" id="chat-body">
+            <div class="chat-messages" id="chat-messages">
+            </div>
+        </div>
+        <div class="panel-footer" id="chat-footer">
+            <div class="btn-group">
+                <input type="text" class="form-control input-sm chat-input" placeholder="Type message here..." value="{{message}}" ng-model="message" id="message" on-enter="sendMessage()" required/>
+                <button class="btn {{message.length>0?'btn-primary':'btn-secondary disabled'}} " ng-click="sendMessage()" value="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
